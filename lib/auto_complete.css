@@ -1,0 +1,39 @@
+/*
+ * -----------------------------------------------------------------------------------
+ * 候補一覧表示時のスタイルです。大体以下のようなタグ構造になっています。
+ * -----------------------------------------------------------------------------------
+ *
+
+<div class="suggest_box">
+    <ul class=suggest_list">
+        <li class="suggest_item"><a>[string1]</a></li>
+        <li class="suggest_item"><a>[string2]</a></li>
+        <li class="suggest_item"><a>[string3]</a></li>
+        <li class="suggest_item"><a>[string4]</a></li>
+        <li class="suggest_item"><a>[string5]</a></li>
+        ...
+    </ul>
+</div>
+
+ */
+
+ div.suggest_box {
+    max-height: 150px;
+    overflow: scroll;
+    background-color: #fff;
+    border: solid 1px #000;
+}
+
+li.suggest_item {
+    padding: 4px;
+}
+
+li.suggest_item:hover, 
+li.suggest_item.current_suggest {
+    background-color: #0ff;
+}
+
+li.suggest_item a {
+    display: block;
+    color: #000;
+}

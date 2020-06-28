@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Demo</title>
+        <link rel="stylesheet" href="./lib/auto_complete.css">
+        <style>
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .list-1 {
+                list-style: disc;
+                padding-left: 40px;
+                background-color: #ccc;
+                margin-bottom: 40px;
+            }
+
+            textarea {
+                width: 300px;
+                height: 100px;
+                margin-bottom: 40px;
+            }
+        </style>
+
+        <script src="./lib/functions.js"></script>
+        <script>
+            
+            AutoCompleteMgr(
+                [
+                    'コンドルがよろこんどる',
+                    'hogehoge',
+                    'hoge',
+                    'piyopiyo',
+                    '布団がふっとんだ',
+                    '山田 太郎',
+                    'アルミ缶の上にあるミカン'
+                ],
+                [
+                    'area-1',
+                    'area-3'
+                ]
+            );
+
+        </script>
+    </head>
+    <body>
+        <p>以下の文言を入力すると自動補完しようとします</p>
+        <ul class="list-1">
+            <li>コンドルがよろこんどる</li>
+            <li>hogehoge</li>
+            <li>hoge</li>
+            <li>piyopiyo</li>
+            <li>布団がふっとんだ</li>
+            <li>山田 太郎</li>
+            <li>アルミ缶の上にあるミカン</li>
+        </ul>
+
+        <p>補完されるテキストボックス</p>
+        <textarea class="area-1"></textarea>
+        <p>補完されないテキストボックス</p>
+        <textarea class="area-2"></textarea>
+        <p>補完されるテキストボックス</p>
+        <textarea class="area-3"></textarea>
+    </body>
+</html>
